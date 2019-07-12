@@ -1,9 +1,10 @@
 /*
  * 01/06/2019
+ * Samuel Mercado
  * 
- * Description: determines if one string is a permutation of the other.
+ * Description: Determines if one string is a permutation of the other.
  * 
- * Assumption(s): the strings are case sensitive, and whitespace is insignificant.
+ * Assumption(s): The strings are case sensitive, and whitespace is insignificant.
  */
 
 #include <iostream>
@@ -17,7 +18,7 @@ using namespace std;
  * the same, then they are permutations of one another. 
  * 
  * Overall Time Complexity: O(n)
- * Additional Spacial Complexity: O(1)
+ * Additional Space Complexity: O(1)
  */
 bool isPermutation(string str1, string str2) {
     if (str1.length() != str2.length())

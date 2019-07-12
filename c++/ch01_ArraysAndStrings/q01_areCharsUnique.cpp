@@ -1,11 +1,12 @@
 /*
  * 01/05/2019
+ * Samuel Mercado
  * 
- * Description: checks if a given string contains all unique characters. Two implementations
+ * Description: Checks if a given string contains all unique characters. Two implementations
  * are provided: the first uses a hash map, and the second does not use any additional data
  * structures (at the cost of a slower runtime).
  * 
- * Assumption(s): the string is ASCII encoded.
+ * Assumption(s): The string is ASCII encoded.
  */
 
 #include <algorithm>    // std::sort
@@ -23,7 +24,7 @@ using namespace std;
  * complexity is increased due to the additional data structure.
  * 
  * Overall Time Complexity: O(n)
- * Additional Spacial Complexity: O(n)
+ * Additional Space Complexity: O(n)
  */
 bool areCharsUnique1(string str) {
     unordered_map<int, char> table;

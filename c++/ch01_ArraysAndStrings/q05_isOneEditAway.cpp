@@ -1,10 +1,11 @@
 /*
  * 01/09/2019
+ * Samuel Mercado
  * 
- * Description: determines whether or not two strings are more than one edit
+ * Description: Determines whether or not two strings are more than one edit
  * away from one another.
  * 
- * Assumption(s): the strings are case sensitive.
+ * Assumption(s): The strings are case sensitive.
  */
 
 #include <iostream>
@@ -21,7 +22,7 @@ using namespace std;
  * more than one edit for the strings to become equal.
  * 
  * Overall Time Complexity: O(n), where n = shorter string length.
- * Additional Spacial Complexity: O(n), where n = str1.length
+ * Additional Space Complexity: O(n), where n = str1.length
  */
 bool isOneEditAway(string str1, string str2) {
     int editCount = 0;

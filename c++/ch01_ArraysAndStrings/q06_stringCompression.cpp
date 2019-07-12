@@ -1,9 +1,10 @@
 /*
  * 01/10/2019
+ * Samuel Mercado
  * 
- * Description: performs basic string compression using counts of repeated characters.
+ * Description: Performs basic string compression using counts of repeated characters.
  * 
- * Assumption(s): the strings are case sensitive.
+ * Assumption(s): The strings are case sensitive.
  */
 
 #include <iostream>
@@ -25,7 +26,7 @@ using namespace std;
  * not negatively affect the efficiency of the algorithm. 
  * 
  * Overall Time Complexity: O(n), where n = length of input string.
- * Additional Spacial Complexity: O(m), where m = length of output string.
+ * Additional Space Complexity: O(m), where m = length of output string.
  */
 string compressString(string str) {
     string compressedStr = "";

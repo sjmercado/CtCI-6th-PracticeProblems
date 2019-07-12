@@ -1,9 +1,10 @@
 /*
  * 01/09/2019
+ * Samuel Mercado
  * 
- * Description: determines whether a string is a permutation of a palindrome.
+ * Description: Determines whether a string is a permutation of a palindrome.
  * 
- * Assumption(s): the characters in the string are case sensitive.
+ * Assumption(s): The characters in the string are case sensitive.
  */
 
 #include <algorithm>    // std::remove_if

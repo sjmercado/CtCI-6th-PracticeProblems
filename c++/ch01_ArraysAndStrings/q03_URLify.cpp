@@ -1,9 +1,10 @@
 /*
  * 01/08/2019
+ * Samuel Mercado
  * 
- * Description: replaces all spaces within a string with "%20".
+ * Description: Replaces all spaces within a string with "%20".
  * 
- * Assumption(s): the given string has enough add'l spaces to accommadate the space
+ * Assumption(s): The given string has enough add'l spaces to accommadate the space
  * needed for the extra characters.
  */
 
@@ -18,7 +19,7 @@ using namespace std;
  * that computes the replacement in-place.
  * 
  * Overall Time Complexity: O(n)
- * Additional Spacial Complexity: O(n)
+ * Additional Space Complexity: O(n)
  */
 string URLify(string str, int trueLength) {
     string newStr = "";
