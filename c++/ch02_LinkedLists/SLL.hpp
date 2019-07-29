@@ -5,6 +5,7 @@ struct Node {
     int data;
     Node* next;
 
+    Node();         // Default constructor
     Node(int d);    // Constructor
 };
 
@@ -12,10 +13,11 @@ class SLL {
     public:
         Node *head, *tail;
     
-        SLL();      // Constructor
-        ~SLL();     // Destructor
+        SLL();                      // Default Constructor
+        SLL(const SLL &oldList);    // Copy constructor
         void print();
-        void appendToTail(int d);
+        void appendToTail(int val);
+        void generateList(int size, int max);
         void removeDuplicates1();                           // q01: Buffers are allowed. 
         void removeDuplicates2();                           // q01: Buffers are not allowed.
         void deleteMiddleNode(Node* node);                  // q03
