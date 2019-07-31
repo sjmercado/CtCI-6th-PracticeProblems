@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>       // std::time
 #include "SLL.hpp"
 
 /************************** FUNCTIONS FOR THE NODE STRUCT **************************/
@@ -10,7 +9,7 @@ Node::Node() {
     next = nullptr;
 }
 
-/* Node constructor. */
+/* Node parameterized constructor. */
 Node::Node(int d) {
     data = d;
     next = nullptr;
@@ -22,6 +21,31 @@ Node::Node(int d) {
 SLL::SLL() {
     head = nullptr;
     tail = nullptr;
+}
+
+/* SLL parameterized constructor */
+SLL::SLL(int size, int max) {
+    // Allocate memory for the head node (which will give access to entire list).
+    head = new Node();
+
+    // Create first node.
+    int val = std::rand() % max + 1;
+    head->data = val;
+    tail = head;
+
+    // Create remaining nodes (if the desired size is more than 1)
+    if (size > 1) {
+        Node* curr = head;
+
+        // Create new nodes with values in the range of [1, max] and append to the end of the list.
+        for (int i = 1; i < size; i++) {
+            val = std::rand() % max + 1;    
+            Node* node = new Node(val);
+            curr->next = node;
+            curr = node;
+        }
+        tail = curr;
+    }
 }
 
 /* SLL copy constructor */
@@ -83,21 +107,8 @@ void SLL::appendToTail(int val) {
     tail = newTail;
 }
 
-/* Creates a linked list with randomly-generated values.
- * Time Complexity: O(n) */
-void SLL::generateList(int size, int max) {
-    // Initialize random seed -- O(1) time complexity.
-    std::srand(time(0));
-
-    // Generate random number between 1 and 'max', and append it to the end of the list.
-    for (int i = 0; i < size; i++) {
-        int val = std::rand() % max + 1;    
-        appendToTail(val);
-    }
-}
-
 /* Returns the size of the linked list. 
- * Time Complexity = O(n). */
+ * Time Complexity: O(n). */
 int SLL::size() {
     Node* curr = head;
     int size = 0;
